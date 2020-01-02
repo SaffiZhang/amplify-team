@@ -1,6 +1,6 @@
 {
 	"auth": {
-		"amplifyteame7d43ec3": {
+		"amplifyteam9be10219": {
 			"service": "Cognito",
 			"providerPlugin": "awscloudformation",
 			"dependsOn": []
@@ -10,54 +10,6 @@
 		"s3": {
 			"service": "S3",
 			"providerPlugin": "awscloudformation"
-		}
-	},
-	"api": {
-		"amplifyteam": {
-			"service": "AppSync",
-			"providerPlugin": "awscloudformation",
-			"output": {
-				"authConfig": {
-					"additionalAuthenticationProviders": [],
-					"defaultAuthentication": {
-						"authenticationType": "AMAZON_COGNITO_USER_POOLS",
-						"userPoolConfig": {
-							"userPoolId": "authamplifyteame7d43ec3"
-						}
-					}
-				}
-			}
-		}
-	},
-	"function": {
-		"function": {
-			"service": "Lambda",
-			"providerPlugin": "awscloudformation",
-			"build": true,
-			"dependsOn": [
-				{
-					"category": "auth",
-					"resourceName": "amplifyteame7d43ec3",
-					"attributes": [
-						"UserPoolId"
-					]
-				},
-				{
-					"category": "storage",
-					"resourceName": "s3",
-					"attributes": [
-						"BucketName"
-					]
-				},
-				{
-					"category": "api",
-					"resourceName": "amplifyteam",
-					"attributes": [
-						"GraphQLAPIIdOutput",
-						"GraphQLAPIEndpointOutput"
-					]
-				}
-			]
 		}
 	}
 }

@@ -1,7 +1,7 @@
 {
     "bucketName": "amplify-team-s3",
-    "authPolicyName": "s3_amplify_42235aac",
-    "unauthPolicyName": "s3_amplify_42235aac",
+    "authPolicyName": "s3_amplify_2bab4a5d",
+    "unauthPolicyName": "s3_amplify_2bab4a5d",
     "authRoleName": {
         "Ref": "AuthRoleName"
     },
@@ -19,15 +19,15 @@
         "s3:DeleteObject"
     ],
     "s3PermissionsAuthenticatedPublic": "s3:PutObject,s3:GetObject,s3:DeleteObject",
-    "s3PublicPolicy": "Public_policy_00440f9b",
+    "s3PublicPolicy": "Public_policy_ee014402",
     "s3PermissionsAuthenticatedUploads": "s3:PutObject",
-    "s3UploadsPolicy": "Uploads_policy_00440f9b",
+    "s3UploadsPolicy": "Uploads_policy_ee014402",
     "s3PermissionsAuthenticatedProtected": "s3:PutObject,s3:GetObject,s3:DeleteObject",
-    "s3ProtectedPolicy": "Protected_policy_00440f9b",
+    "s3ProtectedPolicy": "Protected_policy_ee014402",
     "s3PermissionsAuthenticatedPrivate": "s3:PutObject,s3:GetObject,s3:DeleteObject",
-    "s3PrivatePolicy": "Private_policy_00440f9b",
+    "s3PrivatePolicy": "Private_policy_ee014402",
     "AuthenticatedAllowList": "ALLOW",
-    "s3ReadPolicy": "read_policy_00440f9b",
+    "s3ReadPolicy": "read_policy_ee014402",
     "s3PermissionsGuestPublic": "DISALLOW",
     "s3PermissionsGuestUploads": "DISALLOW",
     "GuestAllowList": "DISALLOW",
