@@ -11,5 +11,22 @@
 			"service": "S3",
 			"providerPlugin": "awscloudformation"
 		}
+	},
+	"api": {
+		"amplifyteam": {
+			"service": "AppSync",
+			"providerPlugin": "awscloudformation",
+			"output": {
+				"authConfig": {
+					"additionalAuthenticationProviders": [],
+					"defaultAuthentication": {
+						"authenticationType": "AMAZON_COGNITO_USER_POOLS",
+						"userPoolConfig": {
+							"userPoolId": "authamplifyteam9be10219"
+						}
+					}
+				}
+			}
+		}
 	}
 }
