@@ -5,6 +5,7 @@ export const onCreateBlog = `subscription OnCreateBlog {
   onCreateBlog {
     id
     name
+    text
     posts {
       items {
         id
@@ -19,6 +20,7 @@ export const onUpdateBlog = `subscription OnUpdateBlog {
   onUpdateBlog {
     id
     name
+    text
     posts {
       items {
         id
@@ -33,6 +35,7 @@ export const onDeleteBlog = `subscription OnDeleteBlog {
   onDeleteBlog {
     id
     name
+    text
     posts {
       items {
         id
@@ -50,6 +53,7 @@ export const onCreatePost = `subscription OnCreatePost {
     blog {
       id
       name
+      text
       posts {
         nextToken
       }
@@ -71,6 +75,7 @@ export const onUpdatePost = `subscription OnUpdatePost {
     blog {
       id
       name
+      text
       posts {
         nextToken
       }
@@ -92,6 +97,7 @@ export const onDeletePost = `subscription OnDeletePost {
     blog {
       id
       name
+      text
       posts {
         nextToken
       }
@@ -116,6 +122,7 @@ export const onCreateComment = `subscription OnCreateComment {
       blog {
         id
         name
+        text
       }
       comments {
         nextToken
@@ -134,6 +141,7 @@ export const onUpdateComment = `subscription OnUpdateComment {
       blog {
         id
         name
+        text
       }
       comments {
         nextToken
@@ -152,6 +160,7 @@ export const onDeleteComment = `subscription OnDeleteComment {
       blog {
         id
         name
+        text
       }
       comments {
         nextToken

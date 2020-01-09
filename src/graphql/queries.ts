@@ -1,20 +1,6 @@
 // tslint:disable
 // this is an auto generated file. This will be overwritten
 
-export const getBlog = `query GetBlog($id: ID!) {
-  getBlog(id: $id) {
-    id
-    name
-    posts {
-      items {
-        id
-        title
-      }
-      nextToken
-    }
-  }
-}
-`;
 export const listBlogs = `query ListBlogs(
   $filter: ModelBlogFilterInput
   $limit: Int
@@ -24,6 +10,7 @@ export const listBlogs = `query ListBlogs(
     items {
       id
       name
+      text
       posts {
         nextToken
       }
@@ -32,21 +19,15 @@ export const listBlogs = `query ListBlogs(
   }
 }
 `;
-export const getPost = `query GetPost($id: ID!) {
-  getPost(id: $id) {
+export const getBlog = `query GetBlog($id: ID!) {
+  getBlog(id: $id) {
     id
-    title
-    blog {
-      id
-      name
-      posts {
-        nextToken
-      }
-    }
-    comments {
+    name
+    text
+    posts {
       items {
         id
-        content
+        title
       }
       nextToken
     }
@@ -65,12 +46,35 @@ export const listPosts = `query ListPosts(
       blog {
         id
         name
+        text
       }
       comments {
         nextToken
       }
     }
     nextToken
+  }
+}
+`;
+export const getPost = `query GetPost($id: ID!) {
+  getPost(id: $id) {
+    id
+    title
+    blog {
+      id
+      name
+      text
+      posts {
+        nextToken
+      }
+    }
+    comments {
+      items {
+        id
+        content
+      }
+      nextToken
+    }
   }
 }
 `;
@@ -84,6 +88,7 @@ export const getComment = `query GetComment($id: ID!) {
       blog {
         id
         name
+        text
       }
       comments {
         nextToken
