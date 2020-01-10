@@ -23,7 +23,7 @@ exports.handler = async (event) => {
   req.headers["Content-Type"] = "application/json";
   req.body = JSON.stringify({
       query: graphqlQuery,
-      operationName: "createBlog",
+      operationName: "CreateBlog",
       variables: item
   });
 
@@ -34,6 +34,7 @@ exports.handler = async (event) => {
       signer.addAuthorization(AWS.config.credentials, AWS.util.date.getDate());
   }
 
+  console.log("write to db");
   const data = await new Promise((resolve, reject) => {
       const httpRequest = https.request({ ...req, host: endpoint }, (result) => {
           result.on('data', (data) => {
@@ -44,7 +45,7 @@ exports.handler = async (event) => {
       httpRequest.write(req.body);
       httpRequest.end();
   });
-
+  console.log("done");
   return {
       statusCode: 200,
       body: data
