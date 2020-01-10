@@ -1,0 +1,6 @@
+{
+  "source": "./source",
+  "target": "./target",
+  "log": "./log",
+  "logLevel": "1"
+}

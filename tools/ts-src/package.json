@@ -1,0 +1,12 @@
+{
+  "name": "filesyncservice",
+  "version": "0.0.1",
+  "description": "A file monitor and copy service",
+  "main": "index.js",
+  "license": "Apache-2.0",
+  "dependencies": {
+  },
+  "scripts": {
+    "build": "tsc && cp ./config.json ../dist/config.json"
+  }
+}
