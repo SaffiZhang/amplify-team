@@ -44,12 +44,12 @@
 				"FunctionName": {
 					"Fn::If": [
 						"ShouldNotCreateEnvResources",
-						"lambdalayer",
+						"testlayer",
 						{
 							"Fn::Join": [
 								"",
 								[
-									"lambdalayer",
+									"testlayer",
 									"-",
 									{
 										"Ref": "env"
@@ -91,7 +91,7 @@
 				"Timeout": "25",
 				"Code": {
 					"S3Bucket": "amplify-amplify-team-teamdev-134935-deployment",
-					"S3Key": "amplify-builds/lambdalayer-352f467a6e524a2f6f42-build.zip"
+					"S3Key": "amplify-builds/testlayer-43353763766b49706975-build.zip"
 				}
 			}
 		},
@@ -101,12 +101,12 @@
 				"RoleName": {
 					"Fn::If": [
 						"ShouldNotCreateEnvResources",
-						"amplifyteamLambdaRolea9c20887",
+						"amplifyteamLambdaRole19e6a2b2",
 						{
 							"Fn::Join": [
 								"",
 								[
-									"amplifyteamLambdaRolea9c20887",
+									"amplifyteamLambdaRole19e6a2b2",
 									"-",
 									{
 										"Ref": "env"

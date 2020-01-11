@@ -1,0 +1,28 @@
+{
+    "permissions": {
+        "auth": {
+            "amplifyteam9be10219": [
+                "create",
+                "read",
+                "update",
+                "delete"
+            ]
+        },
+        "storage": {
+            "s3": [
+                "create",
+                "read",
+                "update",
+                "delete"
+            ]
+        },
+        "api": {
+            "amplifyteam": [
+                "create",
+                "read",
+                "update",
+                "delete"
+            ]
+        }
+    }
+}

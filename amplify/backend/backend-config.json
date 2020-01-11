@@ -62,6 +62,35 @@
 					]
 				}
 			]
+		},
+		"testlayer": {
+			"service": "Lambda",
+			"providerPlugin": "awscloudformation",
+			"build": true,
+			"dependsOn": [
+				{
+					"category": "auth",
+					"resourceName": "amplifyteam9be10219",
+					"attributes": [
+						"UserPoolId"
+					]
+				},
+				{
+					"category": "storage",
+					"resourceName": "s3",
+					"attributes": [
+						"BucketName"
+					]
+				},
+				{
+					"category": "api",
+					"resourceName": "amplifyteam",
+					"attributes": [
+						"GraphQLAPIIdOutput",
+						"GraphQLAPIEndpointOutput"
+					]
+				}
+			]
 		}
 	}
 }

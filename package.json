@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "amplify:build:function:lambda": "cd amplify/backend/function/lambda/tsc-src && tsc",
+    "amplify:build:function:lambda": "cd amplify/backend/function/lambdalayer/tsc-src && sh build",
     "amplify:build:function": "npm run amplify:build:function:lambda"
   },
   "private": true,
@@ -29,7 +29,9 @@
     "https": "^1.0.0",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
-    "zone.js": "~0.9.1"
+    "zone.js": "~0.9.1",
+    "url": "^0.11.0",
+    "@aws-amplify/pubsub": "^2.1.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.803.21",
@@ -52,6 +54,6 @@
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
-    "typescript": "^3.7.4"
+    "typescript": "^3.6.4"
   }
 }
