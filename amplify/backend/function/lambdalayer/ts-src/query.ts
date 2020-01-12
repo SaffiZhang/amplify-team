@@ -16,5 +16,23 @@ export const query = {
           }
         }
       }
-      `
+      `,
+  listBlogs: `query ListBlogs(
+  $filter: ModelBlogFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listBlogs(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      name
+      text
+      posts {
+        nextToken
+      }
+    }
+    nextToken
+  }
+}
+`
 }
