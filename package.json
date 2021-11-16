@@ -24,7 +24,7 @@
     "@aws-amplify/cli": "^4.11.0",
     "aws-amplify": "^2.2.1",
     "aws-appsync": "^3.0.2",
-    "aws-sdk": "^2.600.0",
+    "aws-sdk": "^2.814.0",
     "cross-fetch": "^3.0.4",
     "https": "^1.0.0",
     "rxjs": "~6.4.0",
