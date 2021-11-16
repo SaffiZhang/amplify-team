@@ -6,7 +6,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "@viq/graphql": "file:./libs/viq-graphql",
-    "aws-sdk": "^2.600.0",
+    "aws-sdk": "^2.814.0",
     "https": "^1.0.0",
     "url": "^0.11.0"
   }
